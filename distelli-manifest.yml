@@ -1,0 +1,12 @@
+bmcgehee/provision_ubuntu14_apache2:
+  Build:
+    - echo "Nothing to build"
+  PreInstall:
+    - sudo apt-get -y update
+    - sudo apt-get -y install apache2
+    - sudo apt-get -y install php5 libapache2-mod-php5 php5-mcrypt php5-cgi
+  PostInstall:
+    - publicip=$(curl -s ident.me)
+    - echo "Public IP $publicip"
+    - 'echo "You can validate the install by pointing your browser at http://$publicip"'
+
