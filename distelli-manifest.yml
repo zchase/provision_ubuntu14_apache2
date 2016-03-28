@@ -1,4 +1,4 @@
-bmcgehee/provision_ubuntu14_apache2:
+zchase/provision_ubuntu14_apache2:
   Build:
     - echo "Nothing to build"
   PreInstall:
